@@ -1,16 +1,12 @@
-import './App.css';
+ import Counter from "./counter/Counter.jsx"
 
-function App() {
-  return (
-    <div className="App">
-     <h1>REACT STARTED</h1>
-     <h2>REACT STARTED</h2>
-     <h3>REACT STARTED</h3>
-     <h4>REACT STARTED</h4>
-     <h5>REACT STARTED</h5>
-     <h6>REACT STARTED</h6>
+ function App(){
+  return(
+    <div>
+      <Counter/>
+      {/* component calling Counter() */}
     </div>
-  );
+  
+);
 }
-
 export default App;
