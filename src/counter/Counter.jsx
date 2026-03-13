@@ -53,7 +53,7 @@ var decrement2 =()=>{
 //hooks are inbuilt functions used for performing setof pre-defined actions
 //useState====>hook---->function--->inbuilt function----->React
 
-//js/jsx files--->basic structure 
+//js/jsx files--->basic structure
 //hooks --->use state--->variable,object,array
 //different ways of implementing logic
-//Counter application using react 
+//Counter application using react
