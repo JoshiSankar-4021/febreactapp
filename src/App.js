@@ -5,6 +5,9 @@ import Link from "./textnav/Links.jsx"
 import Buttons from "./button/Buttons.jsx"
 import TopNavbar from "./nav/TopNavbar.jsx"
 import SideNav from "./nav/SideNavbar.jsx";
+import Inlinecss from "./CSS/Iinline/inlinecss.jsx"
+import Internal from "./CSS/internal/internalcss.jsx"
+import External from "./CSS/external/externalcss.jsx"
 import {Routes,Route} from "react-router-dom";
  function App(){
   return(
@@ -16,7 +19,12 @@ import {Routes,Route} from "react-router-dom";
         <Route path="/htmltags" element={<Htmltags/>}/>
         <Route path="/images" element={< Images/>}/>
         <Route path="/links" element={< Link/>}/>
-        <Route path="/" element={< Buttons/>}/>
+        <Route path="/button" element={< Buttons/>}/>
+        <Route path="/inline" element={< Inlinecss/>}/>
+        <Route path="/internal" element={< Internal/>}/>
+        <Route path="/" element={< External/>}/>
+
+
       </Routes>
     </>
   

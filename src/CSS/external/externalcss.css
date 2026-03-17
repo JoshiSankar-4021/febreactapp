@@ -1,0 +1,14 @@
+.m1{
+    border: 2px solid black;
+    margin:10px 10px 10px 10px;
+
+}
+
+.m2{
+    border:2px solid black;
+    margin:0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right:40px;
+    margin-left:50px;
+}
