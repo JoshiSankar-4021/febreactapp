@@ -8,6 +8,9 @@ import SideNav from "./nav/SideNavbar.jsx";
 import Inlinecss from "./CSS/Iinline/inlinecss.jsx"
 import Internal from "./CSS/internal/internalcss.jsx"
 import External from "./CSS/external/externalcss.jsx"
+import Card from "./Card/Card.jsx"
+import Render from "./render/render.jsx"
+
 import {Routes,Route} from "react-router-dom";
  function App(){
   return(
@@ -22,9 +25,9 @@ import {Routes,Route} from "react-router-dom";
         <Route path="/button" element={< Buttons/>}/>
         <Route path="/inline" element={< Inlinecss/>}/>
         <Route path="/internal" element={< Internal/>}/>
-        <Route path="/" element={< External/>}/>
-
-
+        <Route path="/external" element={< External/>}/>
+        <Route path="/card" element={<Card/>}/>
+        <Route path="/" element={<Render/>}/>
       </Routes>
     </>
   
