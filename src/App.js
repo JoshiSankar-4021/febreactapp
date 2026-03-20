@@ -9,6 +9,7 @@ import Inlinecss from "./CSS/Iinline/inlinecss.jsx"
 import Internal from "./CSS/internal/internalcss.jsx"
 import External from "./CSS/external/externalcss.jsx"
 import Card from "./Card/Card.jsx"
+import Forms from "./forms/forms.jsx"
 import Render from "./render/render.jsx"
 
 import {Routes,Route} from "react-router-dom";
@@ -16,7 +17,7 @@ import {Routes,Route} from "react-router-dom";
   return(
     <>
       <TopNavbar/>
-      <SideNav/>
+      {/* <SideNav/> */}
       <Routes>
         <Route path="/counter"  element={<Counter/>}/>
         <Route path="/htmltags" element={<Htmltags/>}/>
@@ -27,7 +28,8 @@ import {Routes,Route} from "react-router-dom";
         <Route path="/internal" element={< Internal/>}/>
         <Route path="/external" element={< External/>}/>
         <Route path="/card" element={<Card/>}/>
-        <Route path="/" element={<Render/>}/>
+        <Route path="/render" element={<Render/>}/>
+        <Route path="/forms" element={<Forms/>}/>
       </Routes>
     </>
   
