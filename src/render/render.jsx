@@ -1,3 +1,4 @@
+import { useEffect,useState } from "react";
 function Render(){
     const products = [
     { id: 1, name: "Nike Shoes", price: 2999 },
@@ -17,6 +18,16 @@ function Render(){
     { id: 15, name: "Converse Sneakers", price: 2499 },
     { id: 16, name: "Converse Sneakers", price: 2499 }
   ];
+const [users,setUsers]=useState([]);
+useEffect(() => {
+    fetch("http://localhost:3000/api/get/Gets?action=gets3", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(res=>res.json()).then((result)=>{console.log(result);
+        setUsers(result);}).catch(error => console.error("Error:", error));
+}, []); // ← Changed from [users] to []
     return(
         <div>
             <ol>
@@ -66,6 +77,8 @@ function Render(){
                 }
                 
             </table>
+
+            <h1>dynamic rendering from database</h1>
             
         </div>
     );

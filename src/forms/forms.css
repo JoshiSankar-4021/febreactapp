@@ -1,0 +1,42 @@
+.formdiv{
+
+}
+
+.formtag{
+    border: 3px solid black ;
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+    padding:30px;
+}
+
+.formi{
+    color:green;
+    border-color: red;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.formi:focus{
+    outline: none;
+    border-color: green;
+    border-radius:10px;
+}
+
+.forml{
+    color:red;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.submitbutton{
+    margin:20px;
+    color:white;
+    background-color: green;
+    border-style: solid;
+    border-color: green;
+    border-radius:10px;
+
+}
