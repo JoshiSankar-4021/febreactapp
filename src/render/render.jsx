@@ -19,15 +19,17 @@ function Render(){
     { id: 16, name: "Converse Sneakers", price: 2499 }
   ];
 const [users,setUsers]=useState([]);
-useEffect(() => {
-    fetch("http://localhost:3000/api/get/Gets?action=gets3", {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    }).then(res=>res.json()).then((result)=>{console.log(result);
-        setUsers(result);}).catch(error => console.error("Error:", error));
-}, []); // ← Changed from [users] to []
+useEffect(   ()=>{
+    fetch("http://localhost:3000/api/get/Gets?action=gets3")
+    .then((response)=>response.json())
+    .then((result)=>{
+        setUsers(result.data);
+    })
+},[]);
+
+useEffect(()=>{
+    console.log(users);
+},[users]);
     return(
         <div>
             <ol>
@@ -80,6 +82,55 @@ useEffect(() => {
 
             <h1>dynamic rendering from database</h1>
             
+            <ol>
+                {
+                    users.map(
+                        (user)=>(
+                            <li key={user.people_id}>{user.user_name},{user.rollnumber}</li>
+                        )
+                    )
+                }
+            </ol>
+            
+            {
+
+                users.map((user)=>(
+                     <div  key={user.people_id}style={{
+                "border":"3px solid black",
+                "height":"200px",
+                "width":"300px",
+                "borderRadius":"10px",
+                "marginLeft":"30px",
+                "background":"red",
+                "marginBottom":"20px"
+            }}>
+                <h1>{user.user_name}</h1>
+                <h3>{user.rollnumber}</h3>
+                </div>
+                ))
+            }
+
+            <table border="1">
+                <tr>
+                    <th>People id</th>
+                    <th>USER NAME</th>
+                    <th>Roll Number</th>
+                    <th>DELETE</th>
+                </tr>
+
+                {
+                    users.map((user)=>(
+                        <tr key={user.people_id}>
+                            <td>{user.people_id}</td>
+                            <td>{user.user_name}</td>
+                            <td>{user.rollnumber}</td>
+                            <td><button>DELETE</button></td>
+                        </tr>
+                    ))
+                }
+                
+            </table>
+
         </div>
     );
 }
