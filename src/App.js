@@ -4,13 +4,14 @@ import Images from "./images/imges.jsx"
 import Link from "./textnav/Links.jsx"
 import Buttons from "./button/Buttons.jsx"
 import TopNavbar from "./nav/TopNavbar.jsx"
-import SideNav from "./nav/SideNavbar.jsx";
+//import SideNav from "./nav/SideNavbar.jsx";
 import Inlinecss from "./CSS/Iinline/inlinecss.jsx"
 import Internal from "./CSS/internal/internalcss.jsx"
 import External from "./CSS/external/externalcss.jsx"
 import Card from "./Card/Card.jsx"
 import Forms from "./forms/forms.jsx"
 import Render from "./render/render.jsx"
+import Animations from "./animations/Animationsfile.jsx"
 
 import {Routes,Route} from "react-router-dom";
  function App(){
@@ -30,6 +31,7 @@ import {Routes,Route} from "react-router-dom";
         <Route path="/card" element={<Card/>}/>
         <Route path="/render" element={<Render/>}/>
         <Route path="/forms" element={<Forms/>}/>
+        <Route path="/animations" element={<Animations/>}/>
       </Routes>
     </>
   

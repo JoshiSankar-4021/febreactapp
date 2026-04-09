@@ -15,6 +15,7 @@ function TopNavBar(){
         <NavLink to="/card" className="navlinktop">card</NavLink>
         <NavLink to="/render" className="navlinktop">render</NavLink>
         <NavLink to="/forms" className="navlinktop">Forms</NavLink>
+        <NavLink to="/animations" className="navlinktop">Animations</NavLink>
 
     </div>
 );
