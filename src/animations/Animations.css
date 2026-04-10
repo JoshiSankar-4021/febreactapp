@@ -21,14 +21,109 @@
 }
 
 @keyframes slidein-left {
-    from{
-        transform:translateX(-100%)
+    from {
+        transform: translateX(100%);
     }
-    to{
-        transform:translateX(0);
+    to {
+        transform: translateX(0);
     }
 }
-.slidein-left{
-    animation:slidein-left 10s ease infinite;
+
+.slidein-left {
+    animation: slidein-left 10s ease infinite;
+}
+
+
+/* Opposite direction */
+@keyframes slidein-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slidein-right {
+    animation: slidein-right 10s ease infinite;
     text-align: right;
+}
+
+
+@keyframes slidein-top {
+    from{
+        transform: translateY(100%);
+    }to{
+        transform:translateY(0)
+    }
+}
+.slidein-top{
+    animation: slidein-top 10s ease infinite;
+    text-align: right;
+}
+
+@keyframes slidein-bottom{
+    from{
+        transform:translateY(-100%)
+    }to{
+        transform:translateY(0)
+    }
+}
+.slidein-bottom{
+    animation:slidein-bottom 10s ease infinite;
+}
+
+@keyframes bounce {
+    0%,100%{
+        transform:translateY(0)
+    }50%{
+        transform:translateY(-20px)
+    }
+}
+.bounce{
+    animation: bounce 1s ease infinite;
+    text-align: center;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1)
+    }50%{
+        transform:scale(1.50)
+    }100%{
+        transform:scale(1)
+    }
+}
+.pulse{
+    animation: pulse 5s ease infinite;
+    text-align: center;
+}
+
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }25%{
+        transform:translateX(-5px)
+    }50%{
+        transform: translateX(5px);
+    }75%{
+        transform: translateX(-5px);
+    }100%{
+        transform: translateX(0);
+    }
+}
+.shake{
+    animation: shake 1s ease infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(360deg);
+    }to{
+        transform: rotate(0deg);
+    }
+}
+.rotate{
+    animation: rotate 10s ease infinite;
 }
